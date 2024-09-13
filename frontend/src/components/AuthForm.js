@@ -1,11 +1,11 @@
-import { Form, Link, useParams, useSearchParams } from 'react-router-dom';
+import { Form, Link, useSearchParams } from 'react-router-dom';
 
 import classes from './AuthForm.module.css';
 
 function AuthForm() {
   const [searchParams] = useSearchParams();
   const isLogin = searchParams.get('mode') === 'login';
-
+console.log('isLogin', isLogin);
   return (
     <>
       <Form method="post" className={classes.form}>
