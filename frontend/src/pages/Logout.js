@@ -1,7 +1,8 @@
 import { redirect } from "react-router-dom";
-import { removeToken } from "../util/auth";
+import { removeToken, removeTokenExpiration } from "../util/auth";
 
 export function action() {
     removeToken();
+    removeTokenExpiration();
     return redirect('/');
 }
